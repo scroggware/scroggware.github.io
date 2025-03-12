@@ -1,0 +1,99 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.font-pixelify {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.bg-scroggware {
+  background-color: #7f91ff;
+}
+
+.stroke-scroggware {
+  stroke: #7f91ff;
+}
+
+.color-scroggware {
+  color: #7f91ff;
+}
+
+.color-scroggware-hoverable {
+  color: white;
+}
+
+.color-scroggware-hoverable:hover {
+  color: #7f91ff;
+}
+
+.color-scroggware-hoverable-reverse {
+  color: #7f91ff;
+}
+
+.color-scroggware-hoverable-reverse:hover {
+  color: #f3f4f6;
+}
+
+.glow {
+  text-shadow: 0px 0px 20px rgba(127, 145, 255, 0.9);
+}
+
+canvas {
+  display: block;
+}
+
+.fill-scroggware {
+  fill: #7f91ff;
+}
+
+@media (width >= 48rem) {
+  .nav-selected {
+    color: #7f91ff;
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px); /* Start 20px to the left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move to original position */
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px); /* Start 20px to the left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move to original position */
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start 20px lower */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+  }
+}

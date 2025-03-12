@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <link rel="stylesheet" href="./src/css/flowbite.css" />
+    <script src="./src/js/tailwind.js"></script>
+    <script src="./src/js/jquery.js"></script>
+    <script src="./src/js/flowbite.js"></script>
+    <script src="./src/js/jqueryValidator.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script
+      src="https://kit.fontawesome.com/a6253f5709.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>scroggware - Contact</title>
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico" />
+    <style>
+      #HeadingSection {
+        animation: fadeUp 1.5s ease-out;
+      }
+
+      #ContactFirm {
+        animation: fadeUp 1.5s ease-out 0.25s; /* Delayed start after h1 */
+        opacity: 0; /* Ensures it starts hidden */
+        animation-fill-mode: forwards; /* Keeps final state */
+      }
+    </style>
+  </head>
+  <body class="bg-gray-800 min-h-screen flex flex-col">
+    <nav class="fixed top-0 left-0 w-full z-50 border-gray-200 bg-gray-900">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a
+          href="/Index.html"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <img src="./src/images/logo.png" class="h-8" alt="Scroggware Logo" />
+          <span
+            class="font-pixelify color-scroggware self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+          >
+            <span id="header-text"></span>
+            <span id="header-cursor">|</span>
+          </span>
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          id="HamburgerMenu"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="/Index.html"
+                class="block py-2 px-3 color-scroggware-hoverable font-pixelify rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:p-0"
+                aria-current="page"
+                >home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/About.html"
+                class="block py-2 px-3 color-scroggware-hoverable font-pixelify rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:p-0"
+                >about</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Services.html"
+                class="block py-2 px-3 color-scroggware-hoverable font-pixelify rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:p-0"
+                >services</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Contact.html"
+                class="block py-2 px-3 font-pixelify text-white bg-blue-700 rounded-sm md:bg-transparent nav-selected md:p-0"
+                >contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="flex-1 p-1">
+      <div class="isolate bg-transparent px-6 py-24 sm:py-32 lg:px-8">
+        <div
+          class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
+          aria-hidden="true"
+        >
+          <div
+            class="relative left-1/2 -z-10 aspect-1155/678 w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
+            style="
+              clip-path: polygon(
+                74.1% 44.1%,
+                100% 61.6%,
+                97.5% 26.9%,
+                85.5% 0.1%,
+                80.7% 2%,
+                72.5% 32.5%,
+                60.2% 62.4%,
+                52.4% 68.1%,
+                47.5% 58.3%,
+                45.2% 34.5%,
+                27.5% 76.7%,
+                0.1% 64.9%,
+                17.9% 100%,
+                27.6% 76.8%,
+                76.1% 97.7%,
+                74.1% 44.1%
+              );
+            "
+          ></div>
+        </div>
+        <div class="mx-auto max-w-2xl text-center" id="HeadingSection">
+          <h2
+            class="text-4xl font-semibold tracking-tight text-balance text-white glow sm:text-5xl"
+          >
+            Contact sales
+          </h2>
+          <p class="mt-2 text-lg/8 text-gray-50">
+            We're glad you wanna talk! We should get back within 3 business
+            days.
+          </p>
+        </div>
+        <form
+          id="ContactForm"
+          action="https://formspree.io/f/mldjelbl"
+          method="POST"
+          class="mx-auto mt-16 max-w-xl sm:mt-20"
+        >
+          <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+            <div class="form-group">
+              <label
+                for="first-name"
+                class="block text-sm/6 font-semibold text-gray-50"
+                >First name</label
+              >
+              <div class="mt-2.5">
+                <input
+                  type="text"
+                  name="first-name"
+                  id="first-name"
+                  autocomplete="given-name"
+                  class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label
+                for="last-name"
+                class="block text-sm/6 font-semibold text-gray-50"
+                >Last name</label
+              >
+              <div class="mt-2.5">
+                <input
+                  type="text"
+                  name="last-name"
+                  id="last-name"
+                  autocomplete="family-name"
+                  class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group sm:col-span-2">
+              <label
+                for="company"
+                class="block text-sm/6 font-semibold text-gray-50"
+                >Company</label
+              >
+              <div class="mt-2.5">
+                <input
+                  type="text"
+                  name="company"
+                  id="company"
+                  autocomplete="organization"
+                  class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                />
+              </div>
+            </div>
+            <div class="form-group sm:col-span-2">
+              <label
+                for="email"
+                class="block text-sm/6 font-semibold text-gray-50"
+                >Email</label
+              >
+              <div class="mt-2.5">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  autocomplete="email"
+                  class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group sm:col-span-2">
+              <label
+                for="message"
+                class="block text-sm/6 font-semibold text-gray-50"
+                >Message</label
+              >
+              <div class="mt-2.5">
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="4"
+                  class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <div class="mt-6">
+              <div
+                class="g-recaptcha"
+                data-sitekey="6LeUsfIqAAAAADtzaoLWCXE92K08zU4Ogi2oeckP"
+                data-callback="enableSubmitButton"
+                data-expired-callback="disableSubmitButton"
+              ></div>
+            </div>
+            <div class="flex gap-x-4 sm:col-span-2">
+              <label class="text-sm/6 text-gray-50" id="switch-1-label">
+                By submitting this form, you agree to our
+                <a href="/Privacy.html" class="font-semibold text-indigo-600"
+                  >privacy&nbsp;policy</a
+                >.
+              </label>
+            </div>
+          </div>
+
+          <div id="SubmitButtonContainer" class="mt-10"></div>
+        </form>
+      </div>
+    </main>
+
+    <footer
+      class="sticky top-[100vh] w-full rounded-lg shadow-sm bg-gray-700 m-2"
+    >
+      <div
+        class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+      >
+        <span class="text-xs sm:text-center text-gray-300"
+          >© 2023
+          <a href="https://flowbite.com/" class="hover:underline"
+            >Scroggware LLC</a
+          >. All Rights Reserved.
+        </span>
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        let text = "scroggware";
+
+        function animateText(text, index = 0) {
+          if (index < text.length) {
+            let delay = Math.floor(Math.random() * (250 - 100 + 1)) + 100;
+            $("#header-text").append(text[index]);
+            setTimeout(() => {
+              animateText(text, index + 1);
+            }, delay);
+          }
+        }
+
+        animateText(text);
+
+        setInterval(() => {
+          $("#header-cursor").toggle();
+        }, 1000);
+      });
+
+      // set the target element that will be collapsed or expanded (eg. navbar menu)
+      const $targetEl = document.getElementById("navbar-default");
+
+      // optionally set a trigger element (eg. a button, hamburger icon)
+      const $triggerEl = document.getElementById("HamburgerMenu");
+
+      // optional options with default values and callback functions
+      const collapseOptions = {};
+
+      const instanceOptions = {
+        id: "navbar-default",
+        override: true,
+      };
+
+      const collapse = new Collapse(
+        $targetEl,
+        $triggerEl,
+        collapseOptions,
+        instanceOptions
+      );
+
+      $(document).ready(function () {
+        // Custom validator methods
+        $.validator.addMethod(
+          "alphaNumCommaDashPeriod",
+          function (value, element) {
+            return this.optional(element) || /^[a-zA-Z0-9,\-. ]+$/.test(value);
+          },
+          "Only alphanumeric characters, commas, dashes, spaces, and periods are allowed."
+        );
+
+        $("#ContactForm").validate({
+          rules: {
+            "first-name": {
+              required: true,
+              maxlength: 50,
+              alphaNumCommaDashPeriod: true,
+            },
+            "last-name": {
+              required: true,
+              maxlength: 50,
+              alphaNumCommaDashPeriod: true,
+            },
+            email: {
+              required: true,
+              email: true,
+              maxlength: 300,
+            },
+            message: {
+              required: true,
+              maxlength: 2000,
+            },
+            company: {
+              maxlength: 300,
+              alphaNumCommaDashPeriod: true,
+            },
+          },
+          messages: {
+            "first-name": {
+              required: "First name is required.",
+              maxlength: "First name cannot exceed 50 characters.",
+            },
+            "last-name": {
+              required: "Last name is required.",
+              maxlength: "Last name cannot exceed 50 characters.",
+            },
+            email: {
+              required: "Email is required.",
+              email: "Enter a valid email address.",
+              maxlength: "Email cannot exceed 300 characters.",
+            },
+            message: {
+              required: "Message is required.",
+              maxlength: "Message cannot exceed 2000 characters.",
+            },
+            company: {
+              maxlength: "Company name cannot exceed 300 characters.",
+            },
+          },
+          errorPlacement: function (error, element) {
+            error.appendTo(element.closest(".form-group"));
+            error.addClass("text-red-400").addClass("text-sm");
+            error.css("font-weight", "bold");
+          },
+        });
+      });
+
+      $(document).on("click", "#SubmitButton", function () {
+        SubmitForm();
+      });
+
+      function SubmitForm() {
+        if (!$("#ContactForm").valid()) {
+          return;
+        }
+
+        $("#SubmitButton").prop("disabled", true);
+        $("#SubmitButton").html('<i class="fa fa-spinner fa-spin"></i>');
+        $("#ContactForm").submit();
+      }
+
+      document
+        .querySelector("form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent default submission
+          let formData = new FormData(event.target);
+
+          fetch(event.target.action, {
+            method: event.target.method,
+            body: formData,
+          })
+            .then((response) => response.json()) // or response.text(), depending on response type
+            .then((data) => {
+              $("#SubmitButton").prop("disabled", false);
+              $("#SubmitButton").html("Let&apos;s Talk");
+            })
+            .catch((error) => {
+              $("#SubmitButton").prop("disabled", false);
+              $("#SubmitButton").html("Let&apos;s Talk");
+            });
+        });
+
+      function enableSubmitButton() {
+        // Check if the button already exists
+        if (!document.getElementById("SubmitButton")) {
+          // Create the submit button
+          let button = document.createElement("button");
+          button.id = "SubmitButton";
+          button.className =
+            "block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600";
+          button.innerHTML = "Let's Talk";
+
+          // Append the button inside the container
+          document.getElementById("SubmitButtonContainer").appendChild(button);
+
+          // Attach event listener to submit the form when clicked
+          button.addEventListener("click", function () {
+            SubmitForm();
+          });
+        }
+      }
+
+      function disableSubmitButton() {
+        // Remove the button if reCAPTCHA expires
+        let button = document.getElementById("SubmitButton");
+        if (button) {
+          button.remove();
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <link rel="stylesheet" href="./src/css/flowbite.css" />
+    <script src="./src/js/tailwind.js"></script>
+    <script src="./src/js/jquery.js"></script>
+    <script src="./src/js/flowbite.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a6253f5709.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>scroggware - About</title>
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico" />
+    <style>
+      #ExampleWork {
+        animation: fadeUp 0.5s ease-out;
+      }
+
+      #ContentSection {
+        animation: fadeUp 0.5s ease-out;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-800 min-h-screen flex flex-col">
+    <nav class="fixed top-0 left-0 w-full z-50 border-gray-200 bg-gray-900">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a
+          href="/Index.html"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <img src="./src/images/logo.png" class="h-8" alt="Scroggware Logo" />
+          <span
+            class="font-pixelify color-scroggware self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+          >
+            <span id="header-text"></span>
+            <span id="header-cursor">|</span>
+          </span>
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          id="HamburgerMenu"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="/Index.html"
+                class="block py-2 px-3 color-scroggware-hoverable font-pixelify rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:p-0"
+                aria-current="page"
+                >home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/About.html"
+                class="block py-2 px-3 font-pixelify text-white bg-blue-700 rounded-sm md:bg-transparent nav-selected md:p-0"
+                >about</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Services.html"
+                class="block py-2 px-3 color-scroggware-hoverable font-pixelify rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:p-0"
+                >services</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Contact.html"
+                class="block py-2 px-3 color-scroggware-hoverable font-pixelify rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:p-0"
+                >contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="flex-1 p-1">
+      <div
+        class="relative isolate overflow-hidden bg-gray-800 px-6 py-24 sm:py-16 lg:overflow-visible lg:px-0"
+      >
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+          <svg
+            class="absolute top-0 left-[max(50%,25rem)] h-[64rem] w-[128rem] -translate-x-1/2 stroke-scroggware [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+            aria-hidden="true"
+          >
+            <defs>
+              <pattern
+                id="e813992c-7d03-4cc4-a2bd-151760b470a0"
+                width="200"
+                height="200"
+                x="50%"
+                y="-1"
+                patternUnits="userSpaceOnUse"
+              >
+                <path d="M100 200V.5M.5 .5H200" fill="none" />
+              </pattern>
+            </defs>
+            <svg x="50%" y="-1" class="overflow-visible fill-scroggware">
+              <path
+                d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+                stroke-width="0"
+              />
+            </svg>
+            <rect
+              width="100%"
+              height="100%"
+              stroke-width="0"
+              fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)"
+            />
+          </svg>
+        </div>
+        <div
+          id="ContentSection"
+          class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10"
+        >
+          <div
+            class="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8"
+          >
+            <div class="lg:pr-4">
+              <div class="lg:max-w-lg">
+                <h1
+                  class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white glow sm:text-5xl"
+                >
+                  What we do
+                </h1>
+                <p class="mt-6 text-xl/8 text-white">
+                  Founded in 2025 by Daniel Scroggins, Scroggware LLC is a
+                  specialized software engineering and architecture consulting
+                  firm dedicated to delivering high-performance, scalable, and
+                  innovative solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            id="ExampleWork"
+            class="-ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden"
+          >
+            <img
+              class="w-[48rem] max-w-none rounded-xl bg-gray-900 ring-1 shadow-xl ring-gray-400/10 sm:w-[57rem]"
+              src="./src/images/examplework.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8"
+          >
+            <div class="lg:pr-4">
+              <div class="max-w-xl text-base/7 text-gray-700 lg:max-w-lg">
+                <ul role="list" class="mt-8 space-y-8 text-gray-600">
+                  <li class="flex gap-x-3">
+                    <div class="m-1 size-5 flex-none color-scroggware">
+                      <i class="fa-solid fa-hourglass-half"></i>
+                    </div>
+                    <span class="text-white"
+                      ><strong class="font-semibold text-gray-50"
+                        >Experience.</strong
+                      >
+                      With deep expertise in .NET Core and React, we help
+                      businesses build modern, efficient, and maintainable
+                      applications that drive success.</span
+                    >
+                  </li>
+                  <li class="flex gap-x-3">
+                    <div class="m-1 size-5 flex-none color-scroggware">
+                      <i class="fa-solid fa-hourglass-half"></i>
+                    </div>
+                    <span class="text-white"
+                      ><strong class="font-semibold text-gray-50"
+                        >Hands On</strong
+                      >
+                      We partner closely with our clients to design and develop
+                      cutting-edge software architectures that meet all of their
+                      needs and stand the test of time. with clients to design
+                      and develop cutting-edge software architectures that stand
+                      the test of time. Whether optimizing existing systems,
+                      building new applications from the ground up, or providing
+                      expert guidance on best practices, we bring years of
+                      hands-on experience and a passion for technology to every
+                      project.</span
+                    >
+                  </li>
+                  <li class="flex gap-x-3">
+                    <div class="m-1 size-5 flex-none color-scroggware">
+                      <i class="fa-solid fa-map"></i>
+                    </div>
+                    <span class="text-white"
+                      ><strong class="font-semibold text-gray-50"
+                        >End to End</strong
+                      >
+                      We will guide you through every step of the process. From
+                      inital concepts to final deployment, to ongoing support,
+                      our goal is to make you experience as smooth and seemless
+                      as we can for our clients.</span
+                    >
+                  </li>
+                </ul>
+                <h2 class="mt-16 text-2xl font-bold tracking-tight text-white">
+                  Let’s build something great together. Contact us today to see
+                  how we can help elevate your software solutions.
+                </h2>
+                <div
+                  class="mt-6 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0"
+                >
+                  <a
+                    href="/Contact.html"
+                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+                  >
+                    Contact us
+                    <svg
+                      class="w-3.5 h-3.5 ms-2 rtl:rotate-180"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 14 10"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M1 5h12m0 0L9 1m4 4L9 9"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="sticky top-[100vh] w-full rounded-lg shadow-sm bg-gray-700 m-2"
+    >
+      <div
+        class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+      >
+        <span class="text-xs sm:text-center text-gray-300"
+          >© 2023
+          <a href="https://flowbite.com/" class="hover:underline"
+            >Scroggware LLC</a
+          >. All Rights Reserved.
+        </span>
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        let text = "scroggware";
+
+        function animateText(text, index = 0) {
+          if (index < text.length) {
+            let delay = Math.floor(Math.random() * (250 - 100 + 1)) + 100;
+            $("#header-text").append(text[index]);
+            setTimeout(() => {
+              animateText(text, index + 1);
+            }, delay);
+          }
+        }
+
+        animateText(text);
+
+        setInterval(() => {
+          $("#header-cursor").toggle();
+        }, 1000);
+      });
+
+      // set the target element that will be collapsed or expanded (eg. navbar menu)
+      const $targetEl = document.getElementById("navbar-default");
+
+      // optionally set a trigger element (eg. a button, hamburger icon)
+      const $triggerEl = document.getElementById("HamburgerMenu");
+
+      // optional options with default values and callback functions
+      const collapseOptions = {};
+
+      const instanceOptions = {
+        id: "navbar-default",
+        override: true,
+      };
+
+      const collapse = new Collapse(
+        $targetEl,
+        $triggerEl,
+        collapseOptions,
+        instanceOptions
+      );
+    </script>
+  </body>
+</html>
