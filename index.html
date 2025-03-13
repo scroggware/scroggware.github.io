@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <link rel="stylesheet" href="./src/css/flowbite.css" />
+    <script src="./src/js/tailwind.js"></script>
+    <script src="./src/js/jquery.js"></script>
+    <script src="./src/js/flowbite.js"></script>
+    <title>scroggware - Home</title>
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico" />
+    <style>
+
+      #jumbotitle {
+        animation: fadeUp 1.5s ease-out;
+      }
+
+      #jumbotext {
+        animation: fadeUp 1.5s ease-out 0.25s; /* Delayed start after h1 */
+        opacity: 0; /* Ensures it starts hidden */
+        animation-fill-mode: forwards; /* Keeps final state */
+      }
+
+      #jumbobuttons {
+        animation: fadeUp 1.5s ease-out 0.5s; /* Delayed start after h1 */
+        opacity: 0; /* Ensures it starts hidden */
+        animation-fill-mode: forwards; /* Keeps final state */
+      }
+      
+      #jtCanvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Places it behind the div */
+        animation: fadeIn 2s ease-in-out;
+      }
+    
+      #jumbotron {
+        position: relative;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        line-height: 200px;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-800 relative min-h-screen flex flex-col">
+    <canvas id="jtCanvas" class="min-h-screen"></canvas>
+    <div>
+      <nav class="fixed top-0 left-0 w-full z-50 border-gray-200 bg-gray-900">
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <a
+            href="/index.html"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <img src="./src/images/logo.png" class="h-8" alt="Scroggware Logo" />
+            <span
+              class="font-pixelify color-scroggware self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            >
+              <span id="header-text"></span>
+              <span id="header-cursor">|</span>
+            </span>
+          </a>
+          <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            id="HamburgerMenu"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul
+              class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            >
+              <li>
+                <a
+                  href="/index.html"
+                  class="block py-2 px-3 font-pixelify text-white bg-blue-700 rounded-sm md:bg-transparent nav-selected md:p-0"
+                  aria-current="page"
+                  >home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/About.html"
+                  class="block py-2 px-3 color-scroggware-hoverable font-pixelify rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:p-0"
+                  >about</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/Services.html"
+                  class="block py-2 px-3 color-scroggware-hoverable font-pixelify rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:p-0"
+                  >services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/Contact.html"
+                  class="block py-2 px-3 color-scroggware-hoverable font-pixelify rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:p-0"
+                  >contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+      <main class="flex-1 p-4>
+  
+        <div>
+  
+          <div id="jumbotron">      
+            <section class="bg-center bg-no-repeat bg-transparent bg-blend-multiply">
+            <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+                <h1 id="jumbotitle" class="mb-4 text-4xl glow font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Software should feel simple</h1>
+                <p id="jumbotext" class="mb-8 text-lg font-normal text-gray-200 lg:text-xl sm:px-16 lg:px-48">Scroggware specializes in tailored and user friendly sofware specific to each client.<br/>So it always feels simple.</p>
+                <div id="jumbobuttons" class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+                    <a href="/Contact.html" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                      Contact us
+                        <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        </svg>
+                    </a>
+                    <a href="/About.html" class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                        Learn more
+                    </a>  
+                </div>
+            </div>
+            </section>
+          </div>
+        </div>
+  
+      
+      </main>
+  
+      <footer
+      class="sticky top-[100vh] w-full rounded-lg shadow-sm bg-gray-700 m-2"
+    >
+      <div
+        class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+      >
+        <span class="text-xs sm:text-center text-gray-300"
+          >© 2023
+          <a href="https://flowbite.com/" class="hover:underline"
+            >Scroggware LLC</a
+          >. All Rights Reserved.
+        </span>
+      </div>
+    </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#year").html(new Date().getFullYear());
+      });
+
+      $(document).ready(function () {
+        let text = "scroggware";
+
+        function animateText(text, index = 0) {
+          if (index < text.length) {
+            let delay = Math.floor(Math.random() * (250 - 100 + 1)) + 100;
+            $("#header-text").append(text[index]);
+            setTimeout(() => {
+              animateText(text, index + 1);
+            }, delay);
+          }
+        }
+
+        animateText(text);
+
+        setInterval(() => {
+          $("#header-cursor").toggle();
+        }, 1000);
+      });
+
+      // set the target element that will be collapsed or expanded (eg. navbar menu)
+      const $targetEl = document.getElementById("navbar-default");
+
+      // optionally set a trigger element (eg. a button, hamburger icon)
+      const $triggerEl = document.getElementById("HamburgerMenu");
+
+      // optional options with default values and callback functions
+      const collapseOptions = {};
+
+      const instanceOptions = {
+        id: "navbar-default",
+        override: true,
+      };
+
+      const collapse = new Collapse(
+        $targetEl,
+        $triggerEl,
+        collapseOptions,
+        instanceOptions
+      );
+
+      // perlin noise //////////////////
+      let perlin = {
+        rand_vect: function(){
+            let theta = Math.random() * 2 * Math.PI;
+            return {x: Math.cos(theta), y: Math.sin(theta)};
+        },
+        dot_prod_grid: function(x, y, vx, vy){
+            let g_vect;
+            let d_vect = {x: x - vx, y: y - vy};
+            if (this.gradients[[vx,vy]]){
+                g_vect = this.gradients[[vx,vy]];
+            } else {
+                g_vect = this.rand_vect();
+                this.gradients[[vx, vy]] = g_vect;
+            }
+            return d_vect.x * g_vect.x + d_vect.y * g_vect.y;
+        },
+        smootherstep: function(x){
+            return 6*x**5 - 15*x**4 + 10*x**3;
+        },
+        interp: function(x, a, b){
+            return a + this.smootherstep(x) * (b-a);
+        },
+        seed: function(){
+            this.gradients = {};
+            this.memory = {};
+        },
+        get: function(x, y) {
+            if (this.memory.hasOwnProperty([x,y]))
+                return this.memory[[x,y]];
+            let xf = Math.floor(x);
+            let yf = Math.floor(y);
+            //interpolate
+            let tl = this.dot_prod_grid(x, y, xf,   yf);
+            let tr = this.dot_prod_grid(x, y, xf+1, yf);
+            let bl = this.dot_prod_grid(x, y, xf,   yf+1);
+            let br = this.dot_prod_grid(x, y, xf+1, yf+1);
+            let xt = this.interp(x-xf, tl, tr);
+            let xb = this.interp(x-xf, bl, br);
+            let v = this.interp(y-yf, xt, xb);
+            this.memory[[x,y]] = v;
+            return v;
+        }
+    }
+      perlin.seed();
+      // end perlin noise //////////////
+
+      const canvas = document.getElementById("jtCanvas");
+        const ctx = canvas.getContext("2d");
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        canvas.style.opacity = 1;
+        
+        const cols = 120;
+        const rows = 120;
+        const spacing = Math.min(canvas.width, canvas.height) / cols * 2.5;
+        let time = 0;
+        
+        function project3D(x, y, z) {
+            const scale = 3; // Decreased scale to zoom out
+            const angleX = Math.PI / 4.5; // Slightly flatter angle for more view
+            const angleY = Math.PI / 3.8; // Adjusted rotation for better perspective
+            let newX = x * Math.cos(angleY) - y * Math.sin(angleY);
+            let newY = x * Math.sin(angleY) * Math.sin(angleX) + y * Math.cos(angleY) * Math.sin(angleX) - z * Math.cos(angleX);
+            return { x: newX * scale, y: newY * scale };
+        }
+        
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.strokeStyle = "#7f91ff";
+            ctx.lineWidth = 1.5;
+            
+            const offsetX = canvas.width / 2;
+            const offsetY = canvas.height / 2;
+            const noiseFactorX = 2.5;
+            const noiseFactorY = 3;
+            
+            for (let i = 0; i < cols - 1; i++) {
+                for (let j = 0; j < rows - 1; j++) {
+                    let noise = perlin.get(time * noiseFactorX, time * noiseFactorY);
+                    let z1 = Math.sin((i + time) * 0.1) * Math.cos((j + time) * 0.1) * 50;
+                    let z2 = Math.sin((i + 1 + time) * 0.1) * Math.cos((j + time) * 0.1) * 50;
+                    let z3 = Math.sin((i + time) * 0.1) * Math.cos((j + 1 + time) * 0.1) * 50;
+                    let z4 = Math.sin((i + 1 + time) * 0.1) * Math.cos((j + 1 + time) * 0.1) * 50;
+                    
+                    let p1 = project3D(i * spacing - canvas.width / 2, j * spacing - canvas.height / 2, z1);
+                    let p2 = project3D((i + 1) * spacing - canvas.width / 2, j * spacing - canvas.height / 2, z2);
+                    let p3 = project3D(i * spacing - canvas.width / 2, (j + 1) * spacing - canvas.height / 2, z3);
+                    let p4 = project3D((i + 1) * spacing - canvas.width / 2, (j + 1) * spacing - canvas.height / 2, z4);
+                    
+                    ctx.beginPath();
+                    ctx.moveTo(offsetX + p1.x, offsetY + p1.y);
+                    ctx.lineTo(offsetX + p2.x, offsetY + p2.y);
+                    ctx.lineTo(offsetX + p4.x, offsetY + p4.y);
+                    ctx.lineTo(offsetX + p3.x, offsetY + p3.y);
+                    ctx.closePath();
+                    ctx.stroke();
+                }
+            }
+            
+            time += 0.03;
+            requestAnimationFrame(draw);
+        }
+        
+        draw();
+
+        
+    </script>
+  </body>
+</html>
