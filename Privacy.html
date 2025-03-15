@@ -248,10 +248,9 @@
         class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
       >
         <div class="text-xs sm:text-center text-gray-300">
-          © 2023
-          <a href="https://flowbite.com/" class="hover:underline"
-            >Scroggware LLC</a
-          >. All Rights Reserved.
+          © <span id="year"></span>
+          <a href="/index.html" class="hover:underline">Scroggware LLC</a>. All
+          Rights Reserved.
         </div>
         <div class="text-xs mr-8 sm:text-center text-gray-300">
           View our
@@ -261,6 +260,10 @@
     </footer>
 
     <script type="text/javascript">
+      $(document).ready(function () {
+        $("#year").html(new Date().getFullYear());
+      });
+
       $(document).ready(function () {
         let text = "scroggware";
 

@@ -151,9 +151,9 @@
                 </h3>
                 <p class="mt-5 text-sm/6 text-gray-50">
                   We will meet with you to learn your business needs inside and
-                  out in order to best determine the scope and requirements of
-                  your project. After determining a timeline, we will follow up
-                  with a quote for the cost of development.
+                  out to best determine the scope and requirements of your
+                  project. After determining a timeline, we will follow up with
+                  a quote for the cost of development.
                 </p>
               </div>
             </article>
@@ -169,8 +169,8 @@
                 </h3>
                 <p class="mt-5 text-sm/6 text-gray-50">
                   Working along side you, we will work dilligently to build your
-                  project. We stay in touch to ensure your needs are being met
-                  and you love the product.
+                  solution. We stay in touch to ensure your needs are being met
+                  and that you love your product.
                 </p>
               </div>
             </article>
@@ -185,8 +185,8 @@
                 </h3>
                 <p class="mt-5 text-sm/6 text-gray-50">
                   For projects in need of ongoing support or enhancement, we can
-                  continue to work together to ensure your product is meeting
-                  all your needs and functioning properly.
+                  continue to work together to ensure the product is working
+                  great and meeting all your needs.
                 </p>
               </div>
             </article>
@@ -228,10 +228,9 @@
         class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
       >
         <div class="text-xs sm:text-center text-gray-300">
-          © 2023
-          <a href="https://flowbite.com/" class="hover:underline"
-            >Scroggware LLC</a
-          >. All Rights Reserved.
+          © <span id="year"></span>
+          <a href="/index.html" class="hover:underline">Scroggware LLC</a>. All
+          Rights Reserved.
         </div>
         <div class="text-xs mr-8 sm:text-center text-gray-300">
           View our
@@ -241,6 +240,10 @@
     </footer>
 
     <script type="text/javascript">
+      $(document).ready(function () {
+        $("#year").html(new Date().getFullYear());
+      });
+
       $(document).ready(function () {
         let text = "scroggware";
 
